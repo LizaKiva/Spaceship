@@ -372,6 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDefinition: {fileID: 11400000, guid: 354f12778fa2cd04bbfa082029a7957d, type: 2}
+  enemyDefinition: {fileID: 0}
 --- !u!4 &1242461323
 Transform:
   m_ObjectHideFlags: 0

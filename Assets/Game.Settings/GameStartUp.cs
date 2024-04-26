@@ -4,6 +4,7 @@ using Leopotam.Ecs;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.VirtualTexturing;
+using Game.Gameplay.Ghosts;
 
 public class GameStartUp : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameStartUp : MonoBehaviour
     private EcsSystems _ecsSystem;
 
     public PlayerDefinition playerDefinition;
+    public EnemyDefinition enemyDefinition;
 
     private void Start()
     {
@@ -23,6 +25,7 @@ public class GameStartUp : MonoBehaviour
                     //.Add(new EnemySpawnSystem())
                     .Add(new MovementSystem())
                     .Inject(playerDefinition)
+                    .Inject(enemyDefinition)
                     //.Add(new CollisionSystem())
                     //.Add(new GameOverSystem());
                     .ProcessInjects();
