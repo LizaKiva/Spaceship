@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.Gameplay.Ghosts
+namespace Game.Gameplay.Enemy
 {
     [CreateAssetMenu(menuName = "Spaceship/" + nameof(EnemyDefinition))]
     public sealed class EnemyDefinition : ScriptableObject

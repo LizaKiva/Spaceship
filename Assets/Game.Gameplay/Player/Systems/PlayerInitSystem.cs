@@ -15,7 +15,6 @@ namespace Game.Gameplay.Player
         {
             if (!playerDefinition) throw new Exception($"{nameof(PlayerDefinition)} doesn't exists!");
 
-            var playerCount = 0;
             var playerObjects = GameObject.FindGameObjectsWithTag("Player");
             foreach (var player in playerObjects)
             {

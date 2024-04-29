@@ -3,8 +3,9 @@ using Game.Gameplay.Enemy;
 using Game.Gameplay.Movement;
 using Leopotam.Ecs;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-namespace Game.Gameplay.Ghosts
+namespace Game.Gameplay.Enemy
 {
     public sealed class EnemySpawnSystem : IEcsRunSystem
     {
@@ -31,6 +32,17 @@ namespace Game.Gameplay.Ghosts
                     })
                     .Replace(new PositionComponent { position = enemy.transform });
             }
+        }
+
+        private Vector3 GetRandomSpawnPosition()
+        {
+            // смотрим позицию камеры по х и у
+            float cameraHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
+            float cameraHalfHeight = Camera.main.orthographicSize;
+
+            float spawnX = Random.Range(-cameraHalfWidth, cameraHalfWidth);
+            float spawnY = cameraHalfHeight;
+            return new Vector3(spawnX, spawnY, 0f);
         }
     }
 }
