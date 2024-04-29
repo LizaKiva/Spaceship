@@ -22,9 +22,8 @@ public class GameStartUp : MonoBehaviour
 
         _ecsSystem.Add(new PlayerInputSystem())
                     .Add(new PlayerInitSystem())
-                    //.Add(new EnemySpawnSystem())
                     .Add(new MovementSystem())
-                    //.Add(new EnemySystem())
+                    .Add(new EnemySystem())
                     .Inject(playerDefinition)
                     .Inject(enemyDefinition)
                     //.Add(new CollisionSystem())
@@ -37,6 +36,7 @@ public class GameStartUp : MonoBehaviour
     private void Update()
     {
         _ecsSystem?.Run();
+        
     }
 
     private void OnDestroy()

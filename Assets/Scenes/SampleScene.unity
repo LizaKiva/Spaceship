@@ -352,6 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1242461323}
   - component: {fileID: 1242461322}
+  - component: {fileID: 1242461324}
   m_Layer: 0
   m_Name: StartUp
   m_TagString: Untagged
@@ -388,6 +389,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1242461324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242461321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ba1206570e46e40a00dced70a3082d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDefinition: {fileID: 11400000, guid: 7bf0a8a5e6f4cb34ea134f0214c60a19, type: 2}
 --- !u!1001 &8860017573334031861
 PrefabInstance:
   m_ObjectHideFlags: 0

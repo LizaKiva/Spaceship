@@ -5,44 +5,25 @@ using Leopotam.Ecs;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+
 namespace Game.Gameplay.Enemy
 {
-    public sealed class EnemySpawnSystem : IEcsRunSystem
+    public sealed class EnemySpawnSystem : MonoBehaviour
     {
-        private readonly System.Random random = null;
-        private readonly EcsWorld ecsWorld = null;
-        private readonly EnemyDefinition gameDefinitions = null;
+        public EnemyDefinition enemyDefinition;
+        public EnemyComponent enemy;
 
-        public void Run()
+        void Start()
         {
-            if (!gameDefinitions) throw new Exception($"{nameof(EnemyDefinition)} doesn't exists!");
-
-            var enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
-            foreach (var enemy in enemyObjects)
-            {
-                var ghostEntity = ecsWorld.NewEntity();
-                ghostEntity
-                    .Replace(new EnemyComponent
-                    {
-                        
-                    })
-                    .Replace(new MovementComponent
-                    {
-                        
-                    })
-                    .Replace(new PositionComponent { position = enemy.transform });
-            }
+            InvokeRepeating("SpawnEnemy", 0, enemyDefinition.delay);
         }
 
-        private Vector3 GetRandomSpawnPosition()
+        void SpawnEnemy()
         {
-            // смотрим позицию камеры по х и у
-            float cameraHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
-            float cameraHalfHeight = Camera.main.orthographicSize;
-
-            float spawnX = Random.Range(-cameraHalfWidth, cameraHalfWidth);
-            float spawnY = cameraHalfHeight;
-            return new Vector3(spawnX, spawnY, 0f);
+            float spawnX = Random.Range(-8f, 8f); // Генерируем случайную позицию по оси X
+            Vector3 spawnPosition = new Vector3(spawnX, 5.2f, 0f); // Позиция врага в верхней части экрана
+            GameObject newEnemy = Instantiate(enemyDefinition.enemyPrefab, spawnPosition, Quaternion.identity);
+            Destroy(newEnemy, 5f);
         }
     }
 }

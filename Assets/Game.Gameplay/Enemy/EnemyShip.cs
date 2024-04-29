@@ -5,7 +5,6 @@ using UnityEngine;
 namespace Game.Gameplay.Enemy { 
     public struct EnemyComponent
     {
-        Vector3 spawnposition;
-
+        public Vector3 spawnPosition;
     }
 }
