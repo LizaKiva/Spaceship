@@ -22,7 +22,7 @@ namespace Game.Gameplay.Movement
                 var estimatedVector = desiredPosition - curPosition;
 
 #if DEBUG
-                Debug.DrawLine(curPosition, desiredPosition, Color.yellow, 1);
+                Debug.DrawLine(curPosition, desiredPosition, Color.yellow, 0f);
 #endif
 
                 if (estimatedVector.magnitude > epsilon)

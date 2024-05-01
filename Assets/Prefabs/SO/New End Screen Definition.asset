@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc6a0728be39d4b4d9c80880a3cee9c8, type: 3}
-  m_Name: New Player Definition
+  m_Script: {fileID: 11500000, guid: c171810c5a319604f9b3bb4429ec3cc7, type: 3}
+  m_Name: New End Screen Definition
   m_EditorClassIdentifier: 
-  playerSize: 0.6
-  playerSpeed: 4
+  endScreenRoot: {fileID: 0}

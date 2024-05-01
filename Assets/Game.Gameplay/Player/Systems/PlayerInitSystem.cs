@@ -24,7 +24,6 @@ namespace Game.Gameplay.Player
                 playerEntity
                     .Replace(new PlayerComponent
                     {
-                        lives = playerDefinition.startLives,
                         spawnPosition = startPosition,
                     })
                     .Replace(new PositionComponent
@@ -34,7 +33,7 @@ namespace Game.Gameplay.Player
                     .Replace(new MovementComponent
                     {
                         desiredPosition = startPosition,
-                        speed = playerDefinition.startSpeed,
+                        speed = playerDefinition.playerSpeed,
                     });
             }
         }
