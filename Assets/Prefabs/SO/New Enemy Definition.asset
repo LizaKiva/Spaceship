@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySize: 0.9
   enemyMinSpeed: 0.5
-  enemyMaxSpeed: 2
-  delay: 1
+  enemyMaxSpeed: 3
+  delay: 3
   enemyPrefab: {fileID: 4662497684413978073, guid: b8bc45ef7f43ef64180e497e4b8eabc3, type: 3}

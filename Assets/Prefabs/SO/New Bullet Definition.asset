@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: New Bullet Definition
   m_EditorClassIdentifier: 
   bulletSpeed: 1
-  delay: 2.5
+  delay: 1
   bulletPrefab: {fileID: 6726551951961772925, guid: 886974ea23e44894eab63f45fa713e43, type: 3}
